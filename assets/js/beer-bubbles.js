@@ -1,3 +1,5 @@
+// Forked from https://github.com/soulwire/sketch.js/blob/master/examples/particles.html
+
 // @todo rename particle to bubble?
 
 // ----------------------------------------
