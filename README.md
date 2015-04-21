@@ -11,5 +11,5 @@ $ gulp
 # Credits
 
 Inspired by / forked
-- [@soulwire](https://github.com/soulwire)'s [Sketch.js](https://github.com/soulwire/sketch.js) [Particle Demo](https://github.com/soulwire/sketch.js/blob/master/examples/particles.html) 
+- [@soulwire](https://github.com/soulwire)'s [Sketch.js](https://github.com/soulwire/sketch.js) [Particle Demo](http://soulwire.github.io/sketch.js/examples/particles.html) 
 - [Jack Rugile](http://codepen.io/jackrugile/)'s Pen [Bubble Sketch.js Test](http://codepen.io/jackrugile/pen/IjKLt/).
