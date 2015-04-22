@@ -1,0 +1,15 @@
+{
+  "name": "beer-bubbles",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sehsarah/beer-bubbles",
+  "authors": [
+    "Sarah Hui <sarah.a.hui@gmail.com>"
+  ],
+  "description": "Interactive animation for a page full of beer bubbles, using sketch.js",
+  "main": "assets/js/beer-bubbles.js",
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ]
+}
