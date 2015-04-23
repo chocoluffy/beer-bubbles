@@ -62,6 +62,7 @@ Particle.prototype = {
         ctx.beginPath();
         ctx.arc( this.x, this.y, this.radius, 0, TWO_PI );
         ctx.fillStyle = 'hsla(' + this.hue + ', 0%, 100%, .35)';
+        ctx.strokeStyle = 'hsla(' + this.hue + ', 0%, 90%, .35)';
         ctx.fill();
     },
 
@@ -86,7 +87,7 @@ Particle.prototype = {
 
 //var COLOURS = [ '#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423' ];
 var MAX_PARTICLES = 800,
-    MAX_BACKGROUND_PARTICLES = 1000,
+    MAX_BACKGROUND_PARTICLES = 1500,
 
     // Group of particles that spawn on mouse move, follow the mouse then disappear (die).
     particles = [],
@@ -153,14 +154,14 @@ demo.spawn = function( x, y ) {
 
 // Spawn the everlasting small background particles that bubble up from bottom to top continually for life of demo.
 demo.spawnBackground = function (x, y) {
-    var radius = 2,
-        backgroundParticle;
+    var backgroundParticle;
 
     if ( backgroundParticles.length >= MAX_BACKGROUND_PARTICLES )
         backgroundPool.push( backgroundParticles.shift() );
 
     backgroundParticle = backgroundPool.length ? backgroundPool.pop() : new Particle();
-    backgroundParticle.init( x, y, radius );
+    // Set radius' of background particles randomly between 2 and 4
+    backgroundParticle.init( x, y, random(2, 4) );
 
     backgroundParticle.wander = random( 0.5, 2.0 );
     //particle.color = random( COLOURS );
