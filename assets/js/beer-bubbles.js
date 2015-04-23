@@ -1,6 +1,7 @@
 // Forked from https://github.com/soulwire/sketch.js/blob/master/examples/particles.html
 
-// @todo rename particle to bubble?
+// @todo rename particle to bubble? (or create new bubble class or options for the background ones)
+// In need of a refactor / tidy up.
 
 // ----------------------------------------
 // Particle
@@ -29,20 +30,31 @@ Particle.prototype = {
         this.vy = 0.0;
     },
 
-    move: function(temporary) {
-        this.x += this.vx;
-        this.y += this.vy;
+    move: function(bubble) {
+        if (!bubble) {
+            this.x += this.vx;
+            this.y += this.vy;
 
-        this.vx *= this.drag;
-        this.vy *= this.drag;
+            this.vx *= this.drag;
+            this.vy *= this.drag;
 
-        this.theta += random( -0.5, 0.5 ) * this.wander;
-        this.vx += sin( this.theta ) * 0.1;
-        this.vy += cos( this.theta ) * 0.1;
+            this.theta += random( -0.5, 0.5 ) * this.wander;
+            this.vx += sin( this.theta ) * 0.1;
+            this.vy += cos( this.theta ) * 0.1;
 
-        if (temporary) {
             this.radius *= 0.96;
             this.alive = this.radius > 0.5;
+         } else {
+
+            this.x += this.vx;
+            this.y += this.vy;
+
+            this.vx *= this.drag;
+            //this.vy *= this.drag;
+
+            this.theta += random( -0.5, 0.5 ) * this.wander;
+            this.vx += sin( this.theta ) * 0.1;
+            this.vy += cos( this.theta ) * 0.1;
         }
     },
 
@@ -93,17 +105,22 @@ demo = Sketch.create({
 demo.setup = function() {
     var i, x, y, z;
 
-    // Set off some initial particles before mouse move detected.
+    // Set off some initial particles before mouse move detected. Spawned in middle of screen.
     for ( i = 0; i < 20; i++ ) {
+        // Start in center of screen (X and Y)
         x = ( demo.width * 0.5 ) + random( -100, 100 );
         y = ( demo.height * 0.5 ) + random( -100, 100 );
         demo.spawn( x, y );
     }
 
-    // Set off the background particles that are continual for life of demo.
+    // Set off the background particles that are continual for life of demo. Spawned at bottom of screen across the page.
     for ( z = 0; z < MAX_BACKGROUND_PARTICLES; z++ ) {
-        x = ( demo.width * 0.5 ) + random( -100, 100 );
-        y = ( demo.height * 0.5 ) + random( -100, 100 );
+
+        // Start in middle of X (give or take 300)
+        x = ( demo.width * 0.5 ) + random( -300, 300 );
+
+        // Start at bottom of Y (between 0 and 100 away from bottom)
+        y = ( demo.height ) + random( 0, 100 );
         demo.spawnBackground( x, y );
     }
 };
@@ -171,8 +188,7 @@ demo.update = function() {
 
         particle = particles[i];
 
-        // Set the temporary flag in move so that when bubble gets too small it "dies"
-        if ( particle.alive ) particle.move(true);
+        if ( particle.alive ) particle.move();
         else pool.push( particles.splice( i, 1 )[0] );
     }
 
@@ -184,7 +200,8 @@ demo.update = function() {
         backgroundParticle = backgroundParticles[x];
 
         // The background particles remain alive and at one size (unlike the mouse responsive particles)
-        if ( backgroundParticle.alive ) backgroundParticle.move();
+        // Set the bubble flag (without it particles "die" when too small)
+        if ( backgroundParticle.alive ) backgroundParticle.move(true);
         else backgroundPool.push( backgroundParticles.splice( x, 1 )[0] );
     }
 };
