@@ -1,16 +1,11 @@
 # Beer Bubbles
 Beer bubbles is an interactive animation for a page full of beer bubbles, using [Sketch.js](https://github.com/soulwire/sketch.js)
 
-This was created as a quirky addition to [Beerbot](http://beerbot.vendhq.com)**, Vend HQ's kegbot interface that displays beer at varying levels. The beer needed bubbles, so creating some sweet interactive JavaScript bubbles seemed like a cool idea.
+Created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface.
 
-I was originally inspired by this [Bubble Sketch.js Test](http://codepen.io/jackrugile/pen/IjKLt/) codepen, so I updated the colours and bubbliness to be more beerlike in this [Beer Bubbles](http://codepen.io/sehsarah/pen/RPbJOd) fork of mine.
+# Note
 
-After playing with that initial trial a bit and gathering some feedback from the other Beerbot hackers, we decided we wanted the bubbles to follow the mouse in a more liquid way. I remembered this [Particle Sketch.js Demo](http://soulwire.github.io/sketch.js/examples/particles.html) which felt pretty close to what I was after, so decided to merge those two ideas together.
-
-This is what I came up with.**
-
-**both Beerbot & this project are works in progress, live soon but not yet :)
-
+Beerbot & this project are works in progress :)
 
 # Building & Running
 
@@ -18,6 +13,26 @@ This is what I came up with.**
 $ npm install
 $ gulp
 ```
+
+# Backstory & Inspo
+
+This was created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface that displays beer at varying levels. The beer needed bubbles, so creating some sweet interactive JavaScript bubbles seemed like a cool idea.
+
+I was originally inspired by this [Bubble Sketch.js Test](http://codepen.io/jackrugile/pen/IjKLt/) codepen, so I updated the colours and bubbliness to be more beerlike in this [Beer Bubbles](http://codepen.io/sehsarah/pen/RPbJOd) fork of mine.
+
+After playing with that initial trial a bit and gathering some feedback from the other Beerbot hackers, we decided we wanted the bubbles to follow the mouse in a more liquid way. I remembered this [Particle Sketch.js Demo](http://soulwire.github.io/sketch.js/examples/particles.html) which felt pretty close to what I was after, so decided to merge those two ideas together.
+
+This is what I came up with.
+
+# Future
+
+This is definitely WIP. Need to update the bubble physics, tidy up the build system & would be good to have configuration options etc. See issues for more.
+
+This might lead to an API for all bubbles, e.g. water. And may in future include sound.
+
+# Current Demo
+
+
 
 # Credits
 
