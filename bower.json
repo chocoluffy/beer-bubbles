@@ -6,7 +6,10 @@
     "Sarah Hui <sarah.a.hui@gmail.com>"
   ],
   "description": "Interactive animation for a page full of beer bubbles, using sketch.js",
-  "main": "assets/js/beer-bubbles.js",
+  "main": [
+    "assets/js/beer-bubbles.js",
+    "assets/js/vendor/sketch.js"
+  ],
   "license": "MIT",
   "ignore": [
     "node_modules",
