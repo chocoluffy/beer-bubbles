@@ -12,7 +12,7 @@ $ npm install
 $ gulp
 ```
 
-# Backstory & Inspo
+# Backstory
 
 This was created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface that displays beer at varying levels. The beer needed bubbles, so creating some sweet interactive JavaScript bubbles seemed like a cool idea.
 
@@ -28,9 +28,9 @@ This is definitely WIP. Need to update the bubble physics, tidy up the build sys
 
 This might lead to an API for all bubbles, e.g. water. And may in future include sound.
 
-# Current Demo
+# Demo
 
-
+![beerbot](https://cloud.githubusercontent.com/assets/1064684/7295418/d12bbb36-ea09-11e4-8aa0-59bae3023735.gif)
 
 # Credits
 
