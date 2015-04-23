@@ -1,7 +1,5 @@
 # Beer Bubbles
-Beer bubbles is an interactive animation for a page full of beer bubbles, using [Sketch.js](https://github.com/soulwire/sketch.js)
-
-Created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface.
+Beer bubbles is an interactive animation for a page full of beer bubbles, using [Sketch.js](https://github.com/soulwire/sketch.js). They were created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface.
 
 Beerbot & this project are works in progress :)
 
@@ -14,7 +12,7 @@ $ gulp
 
 # Backstory
 
-This was created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface that displays beer at varying levels. The beer needed bubbles, so creating some sweet interactive JavaScript bubbles seemed like a cool idea.
+These bubbles have been created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface that displays beer at varying levels. The beer needed bubbles, so creating some sweet interactive JavaScript bubbles seemed like a cool idea.
 
 I was originally inspired by this [Bubble Sketch.js Test](http://codepen.io/jackrugile/pen/IjKLt/) codepen, so I updated the colours and bubbliness to be more beerlike in this [Beer Bubbles](http://codepen.io/sehsarah/pen/RPbJOd) fork of mine.
 
