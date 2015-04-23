@@ -3,8 +3,6 @@ Beer bubbles is an interactive animation for a page full of beer bubbles, using 
 
 Created as a quirky addition to [Beerbot](http://beerbot.sys.vendhq.com), Vend HQ's kegbot interface.
 
-# Note
-
 Beerbot & this project are works in progress :)
 
 # Building & Running
