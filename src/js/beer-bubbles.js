@@ -31,7 +31,7 @@ Particle.prototype = {
     },
 
     move: function(bubble) {
-        //if (!bubble) {
+        if (!bubble) {
             this.x += this.vx;
             this.y += this.vy;
 
@@ -42,13 +42,20 @@ Particle.prototype = {
             this.vx += sin( this.theta ) * 0.1;
             this.vy += cos( this.theta ) * 0.1;
 
-        if (!bubble) {
             this.radius *= 0.96;
             this.alive = this.radius > 0.5;
-        }
-       // } else {
+         } else {
 
-        //}
+            this.x += this.vx;
+            this.y += this.vy;
+
+            this.vx *= this.drag;
+            //this.vy *= this.drag;
+
+            this.theta += random( -0.5, 0.5 ) * this.wander;
+            this.vx += sin( this.theta ) * 0.1;
+            this.vy += cos( this.theta ) * 0.1;
+        }
     },
 
     draw: function( ctx ) {
