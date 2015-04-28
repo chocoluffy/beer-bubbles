@@ -54,7 +54,7 @@ Particle.prototype = {
 
             this.theta += random( -0.5, 0.5 ) * this.wander;
             this.vx += sin( this.theta ) * 0.1;
-            this.vy += cos( this.theta ) * 0.1;
+            //this.vy += cos( this.theta ) * 0.1;
         }
     },
 
